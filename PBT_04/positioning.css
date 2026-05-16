@@ -1,0 +1,19 @@
+/* Positioning playground styles */
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;margin:0}
+.site-header{position:fixed;top:0;left:0;right:0;height:60px;background:#0a74da;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 20px;z-index:1000}
+.site-header .logo{font-weight:700}
+.site-header .nav a{color:#e6f7ff;margin-left:12px;text-decoration:none}
+.site-header .nav a:hover{text-decoration:underline}
+
+.container{display:flex;gap:20px;padding:80px 20px 20px}
+.sidebar{width:250px;position:sticky;top:80px;background:#f4f6fb;padding:12px;border:1px solid #ddd}
+.main{flex:1}
+.products{display:grid;grid-template-columns:repeat(1,1fr);gap:16px}
+.card{position:relative;padding:16px;border:1px solid #ddd;border-radius:6px;background:#fff}
+.badge{position:absolute;top:10px;right:10px;background:#e3342f;color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+.to-top{position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:50%;background:#0a74da;color:#fff;border:none;font-size:20px;cursor:pointer}
+
+/* small responsive */
+@media(max-width:700px){.container{flex-direction:column}.sidebar{position:static;width:100%}}

@@ -1,0 +1,23 @@
+/* PBT03 profile styles */
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:#f6f7fb;color:#222;line-height:1.5;margin:0}
+.site-header{background:linear-gradient(90deg,#0a74da,#0066cc);color:#fff;padding:24px}
+.site-header h1{margin:0}
+.site-header nav{margin-top:12px}
+.site-header a{color:#e6f2ff;text-decoration:none;margin-right:12px}
+.site-header a:hover{color:#fff;text-decoration:underline}
+.site-header a.active{font-weight:700;text-decoration:underline}
+
+.container{max-width:1000px;margin:24px auto;padding:0 16px}
+.skills{width:100%;border-collapse:collapse}
+.skills thead tr{background:#0a74da;color:#fff}
+.skills th,.skills td{border:1px solid #ddd;padding:8px}
+.skills tbody tr:nth-child(even){background:#f2f6fb}
+.skills tbody tr:hover{background:#e9f2ff}
+
+.site-footer{background:#0f2b4a;color:#cfe6ff;padding:12px;text-align:center;margin-top:24px}
+
+/* selectors examples: element, class, id, descendant, pseudo-class */
+.profile h2{color:#0a3f7a}
+#demoId{}
+.profile p{margin:0}

@@ -1,0 +1,16 @@
+/* Ten rules from low to high specificity */
+p { color: #111; }                     /* 0,0,0,1 */
+.text { color: #222; }                 /* 0,0,1,0 */
+.highlight { color: #333; }            /* 0,0,1,0 */
+p.text { color: #444; }                /* 0,0,1,1 */
+#demo { color: #555; }                 /* 0,1,0,0 */
+p#demo { color: #666; }                /* 0,1,0,1 */
+body p.text { color: #777; }           /* 0,0,1,1 */
+/* attribute selector */
+p[lang="vi"]{color:#888}               /* 0,0,1,1 (if present) */
+/* pseudo-class */
+p:hover{color:#999}                    /* 0,0,0,2 (pseudo-class counts in last slot) */
+/* important rule */
+.text.highlight{color:#ff0000 !important} /* !important will override other normal declarations */
+
+/* Final observed color should be red due to !important on combination selector */

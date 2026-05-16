@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Checkout — Đơn hàng</title>
+  <style>table{width:100%;border-collapse:collapse}td,th{border:1px solid #ccc;padding:8px;text-align:left}</style>
+</head>
+<body>
+  <h1>Checkout — Giỏ hàng</h1>
+
+  <section>
+    <h2>Giỏ hàng</h2>
+    <table>
+      <thead>
+        <tr><th>STT</th><th>Sản phẩm</th><th>Đơn giá</th><th>Số lượng</th><th>Thành tiền</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>iPhone 16</td><td>25.990.000</td><td>1</td><td>25.990.000</td></tr>
+        <tr><td>2</td><td>Ốp lưng</td><td>199.000</td><td>2</td><td>398.000</td></tr>
+        <tr><td>3</td><td>Sạc</td><td>299.000</td><td>1</td><td>299.000</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="4">Tổng cộng</td><td>26.687.000</td></tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section>
+    <h2>Thanh toán</h2>
+    <form action="#" method="POST">
+      <p>Phương thức thanh toán:</p>
+      <input type="radio" id="cod" name="payment" value="cod"><label for="cod">COD</label>
+      <input type="radio" id="bank" name="payment" value="bank"><label for="bank">Chuyển khoản</label>
+      <input type="radio" id="wallet" name="payment" value="wallet"><label for="wallet">Ví điện tử</label>
+
+      <label for="promo">Mã giảm giá</label>
+      <input id="promo" name="promo" type="text" pattern="^SALE[0-9]{4}$" placeholder="SALE2026">
+
+      <label for="note">Ghi chú</label>
+      <textarea id="note" name="note" rows="3"></textarea>
+
+      <h3>Thông tin giao hàng</h3>
+      <label for="name">Họ tên</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="delivery">Ngày giao hàng mong muốn</label>
+      <input id="delivery" name="delivery" type="date" min="2026-05-17">
+
+      <label for="slot">Khung giờ</label>
+      <select id="slot" name="slot">
+        <option value="am">Sáng 8-12h</option>
+        <option value="pm">Chiều 14-18h</option>
+        <option value="ev">Tối 18-21h</option>
+      </select>
+
+      <label for="days">Thời gian giao hàng (ngày)</label>
+      <input id="days" name="days" type="range" min="1" max="7" step="1" value="3">
+
+      <label for="search">Tìm sản phẩm</label>
+      <input list="products" id="search" name="search"><datalist id="products">
+        <option value="iPhone 16"><option value="Ốp lưng"><option value="Sạc">
+      </datalist>
+
+      <label for="total">Tổng tiền</label>
+      <output id="total">26687000</output>
+
+      <label for="points">Điểm tích lũy</label>
+      <meter id="points" value="0.6">60%</meter>
+
+      <button type="submit" aria-label="Xác nhận đặt hàng">Xác nhận đặt hàng</button>
+    </form>
+  </section>
+</body>
+</html>

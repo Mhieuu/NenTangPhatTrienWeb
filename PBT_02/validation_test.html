@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Validation Test</title>
+</head>
+<body>
+  <h1>Validation Test — 5 trường hợp</h1>
+  <form action="#" method="POST">
+    <div>
+      <label for="case1">Trường hợp 1 (required):</label>
+      <input type="text" id="case1" name="case1" required value="">
+    </div>
+
+    <div>
+      <label for="case2">Trường hợp 2 (email):</label>
+      <input type="email" id="case2" name="case2" value="abc">
+    </div>
+
+    <div>
+      <label for="case3">Trường hợp 3 (number min=1 max=10):</label>
+      <input type="number" id="case3" name="case3" min="1" max="10" value="15">
+    </div>
+
+    <div>
+      <label for="case4">Trường hợp 4 (pattern 10 digits):</label>
+      <input type="text" id="case4" name="case4" pattern="[0-9]{10}" value="abc123">
+    </div>
+
+    <div>
+      <label for="case5">Trường hợp 5 (password minlength=8):</label>
+      <input type="password" id="case5" name="case5" minlength="8" value="123">
+    </div>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>

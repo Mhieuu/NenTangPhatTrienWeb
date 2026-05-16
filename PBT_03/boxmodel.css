@@ -1,0 +1,12 @@
+/* Box model lab styles */
+.compare{display:flex;gap:20px;padding:20px}
+.box{width:300px;padding:20px;border:5px solid #333;background:#fff}
+.box-1{box-sizing:content-box;background:#f9f9f9}
+.box-2{box-sizing:border-box;background:#eef9ff}
+
+.three-col{width:1000px;display:flex;margin:20px auto}
+.three-col .left{width:250px;padding:15px;background:#f0f4ff}
+.three-col .center{width:500px;padding:20px;background:#fff}
+.three-col .right{width:250px;padding:15px;background:#f0f4ff}
+
+/* fallback version without border-box to demonstrate overflow (optional) */

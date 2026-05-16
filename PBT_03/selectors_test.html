@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Selectors Test</title>
+  <style>
+    body{font-family:Arial,system-ui;margin:20px}
+    .product{border:1px solid #ddd;padding:10px;margin:10px 0}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header class="top-bar dark">
+        <h1>ShopTLU</h1>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/products">Products</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <main>
+        <article class="product">
+            <h2>iPhone 16</h2>
+            <p class="price">25.990.000đ</p>
+            <p>Mô tả sản phẩm...</p>
+        </article>
+        <article class="product featured">
+            <h2>MacBook Pro</h2>
+            <p class="price">45.990.000đ</p>
+            <p>Mô tả sản phẩm...</p>
+        </article>
+    </main>
+  </div>
+
+  <h2>Results (manual check)</h2>
+  <ol>
+    <li><code>h1</code> → ShopTLU</li>
+    <li><code>.price</code> → 25.990.000đ, 45.990.000đ</li>
+    <li><code>#app header</code> → header element containing ShopTLU</li>
+    <li><code>nav a:first-child</code> → Home</li>
+    <li><code>.product.featured h2</code> → MacBook Pro</li>
+    <li><code>article &gt; p</code> → price and description paragraphs inside articles</li>
+    <li><code>a[href="/"]</code> → Home</li>
+    <li><code>.top-bar.dark h1</code> → ShopTLU</li>
+  </ol>
+
+</body>
+</html>

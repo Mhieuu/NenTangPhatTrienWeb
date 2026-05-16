@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Box Model Lab</title>
+  <link rel="stylesheet" href="boxmodel.css">
+</head>
+<body>
+  <h1>Box Model Lab</h1>
+  <section class="compare">
+    <div class="box box-1">
+      <p>Content-box (mặc định)</p>
+    </div>
+    <div class="box box-2">
+      <p>Border-box</p>
+    </div>
+  </section>
+
+  <h2>3-column layout (container 1000px)</h2>
+  <div class="three-col">
+    <div class="left">Sidebar</div>
+    <div class="center">Content</div>
+    <div class="right">Ads</div>
+  </div>
+
+</body>
+</html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Box Model Lab</title>
+  <link rel="stylesheet" href="boxmodel.css">
+</head>
+<body>
+  <h1>Box Model Lab</h1>
+  <p>Tạo 2 hộp so sánh content-box vs border-box. Mở DevTools → Computed để xem box model.</p>
+
+  <div class="row">
+    <div class="box content-box">Content-box<br>width:300px;padding:20px;border:5px solid</div>
+    <div class="box border-box">Border-box<br>box-sizing:border-box;width:300px;padding:20px;border:5px solid</div>
+  </div>
+
+  <h2>Layout 3 cột (container 1000px)</h2>
+  <div class="layout">
+    <aside class="left">Left</aside>
+    <main class="center">Center</main>
+    <aside class="right">Right</aside>
+  </div>
+
+  <p>Chụp screenshot DevTools (Computed) cho mỗi hộp và phần layout.</p>
+</body>
+</html>

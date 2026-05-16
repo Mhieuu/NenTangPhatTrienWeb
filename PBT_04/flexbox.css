@@ -1,0 +1,20 @@
+/* Flexbox layout styles */
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;margin:0}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:#0a74da;color:#fff}
+.navbar .logo{font-weight:700}
+.navbar .menu{display:flex;list-style:none;margin:0;padding:0;gap:20px}
+.navbar .menu li{cursor:pointer}
+.navbar .menu li:hover{text-decoration:underline}
+.navbar .actions button{margin-left:8px}
+
+.cards{display:flex;flex-wrap:wrap;gap:20px;padding:20px}
+.card{flex:0 0 calc(25% - 20px);display:flex;flex-direction:column;border:1px solid #ddd;border-radius:6px;overflow:hidden;padding:12px;background:#fff;transition:transform .2s,box-shadow .2s}
+.card img{width:100%;height:auto}
+.card h3{margin:8px 0}
+.card .price{font-weight:700}
+.card .buy{margin-top:auto;padding:8px;border:none;background:#0a74da;color:#fff;border-radius:4px;cursor:pointer}
+.card:hover{transform:translateY(-5px);box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+
+@media(max-width:900px){.card{flex:0 0 calc(50% - 20px)}}
+@media(max-width:500px){.card{flex:0 0 100%}.navbar .menu{display:none}}
