@@ -1,0 +1,106 @@
+:root {
+  --bg: #0f172a;
+  --surface: #111c34;
+  --surface-soft: #172554;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary: #38bdf8;
+  --border: #23314f;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+
+button, input { font: inherit; }
+
+.shell {
+  width: min(1100px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(17, 28, 52, 0.85);
+}
+
+.hero button,
+.palette input,
+.palette li,
+.lightbox-card button {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.gallery-section { margin-top: 18px; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.gallery button {
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.gallery img { width: 100%; display: block; aspect-ratio: 1 / 1; object-fit: cover; }
+
+.gallery button:focus-visible,
+.hero button:focus-visible,
+.palette input:focus-visible,
+.palette li:focus-visible,
+.lightbox-card button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.help { margin-top: 12px; color: var(--muted); }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.72);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.hidden { display: none; }
+
+.lightbox-card,
+.palette {
+  width: min(760px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.lightbox-card img { width: 100%; border-radius: 14px; }
+.lightbox-card button { position: absolute; right: 24px; top: 24px; width: 40px; height: 40px; font-size: 1.5rem; }
+
+.palette { display: grid; gap: 12px; }
+.palette input { padding: 12px 14px; width: 100%; }
+.palette ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.palette li { padding: 12px 14px; cursor: pointer; }
+.palette li.active { background: var(--surface-soft); border-color: var(--primary); }

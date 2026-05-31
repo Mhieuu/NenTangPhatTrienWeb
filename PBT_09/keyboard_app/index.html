@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <h1>Keyboard Navigation Demo</h1>
+      <button id="paletteButton" aria-label="Open command palette">Ctrl+K</button>
+    </header>
+
+    <section class="gallery-section">
+      <div class="gallery" id="gallery" aria-label="Image gallery"></div>
+      <div class="help">← → / 1-9 / Space / Esc / Ctrl+K</div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="overlay hidden" aria-hidden="true">
+    <div class="lightbox-card">
+      <button id="closeLightbox" aria-label="Close modal">×</button>
+      <img id="lightboxImg" alt="Preview">
+    </div>
+  </div>
+
+  <div id="paletteOverlay" class="overlay hidden" aria-hidden="true">
+    <div class="palette">
+      <input id="paletteInput" type="text" placeholder="Type a command..." aria-label="Command palette">
+      <ul id="paletteList"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

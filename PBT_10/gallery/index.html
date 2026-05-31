@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <h1>Gallery</h1>
+      <p>Scroll để tải thêm ảnh</p>
+    </header>
+    <section id="gallery" class="grid"></section>
+    <div id="loadingMore" class="loading hidden">Đang tải thêm...</div>
+    <div id="loadTrigger" class="trigger"></div>
+  </main>
+
+  <div id="lightbox" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeLightbox" aria-label="Close">×</button>
+      <img id="lightboxImage" alt="Preview">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

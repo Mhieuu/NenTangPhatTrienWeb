@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <form id="registerForm" class="card" novalidate>
+      <h1>Register</h1>
+      <label>Tên
+        <input id="name" type="text">
+        <small class="feedback" id="nameFeedback"></small>
+      </label>
+      <label>Email
+        <input id="email" type="email">
+        <small class="feedback" id="emailFeedback"></small>
+      </label>
+      <label>Password
+        <input id="password" type="password">
+      </label>
+      <div class="meter"><div id="passwordBar"></div></div>
+      <small id="passwordText" class="feedback"></small>
+      <label>Confirm password
+        <input id="confirmPassword" type="password">
+        <small class="feedback" id="confirmFeedback"></small>
+      </label>
+      <label>Phone
+        <input id="phone" type="text" inputmode="numeric" placeholder="0901-234-567">
+        <small class="feedback" id="phoneFeedback"></small>
+      </label>
+      <button id="submitBtn" type="submit" disabled>Submit</button>
+    </form>
+  </main>
+
+  <div id="successModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <h2>Đăng ký thành công!</h2>
+      <pre id="successContent"></pre>
+      <button id="closeSuccess">Đóng</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

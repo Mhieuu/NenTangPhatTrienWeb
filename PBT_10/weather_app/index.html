@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <h1>Weather App</h1>
+      <div class="search-row">
+        <input id="cityInput" type="text" placeholder="Nhập thành phố" value="Hanoi">
+        <button id="searchBtn">Tìm</button>
+      </div>
+      <div id="loading" class="state hidden">⏳ Đang tải...</div>
+      <div id="error" class="state error hidden"></div>
+      <article id="weatherResult" class="result hidden"></article>
+      <div>
+        <h3>Lịch sử tìm kiếm</h3>
+        <div id="history" class="history"></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

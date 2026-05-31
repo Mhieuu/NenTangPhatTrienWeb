@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <div class="header-row">
+        <h1>User Directory</h1>
+        <input id="searchInput" type="search" placeholder="Search by name/email">
+      </div>
+
+      <form id="userForm" class="user-form">
+        <input id="nameInput" type="text" placeholder="Name" required>
+        <input id="emailInput" type="email" placeholder="Email" required>
+        <button type="submit" id="submitUserBtn">Add user</button>
+        <button type="button" id="cancelEditBtn" class="ghost hidden">Cancel edit</button>
+      </form>
+
+      <div id="loading" class="state hidden">Loading users...</div>
+      <div id="message" class="state hidden"></div>
+      <div id="userGrid" class="user-grid"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

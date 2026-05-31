@@ -1,0 +1,52 @@
+.card {
+  background: $surface-color;
+  border-radius: 20px;
+  overflow: hidden;
+  @include card-shadow;
+
+  .card-image {
+    width: 100%;
+    display: block;
+  }
+
+  .card-title {
+    margin: 0;
+    color: $text-color;
+    font-family: $font-display;
+  }
+
+  .card-body {
+    padding: $spacing-md;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &.featured {
+    border: 2px solid $primary-color;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+
+  @include respond-to($breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to($breakpoint-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.buy-button {
+  @include flex-center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: $primary-color;
+  color: white;
+  border: 0;
+}

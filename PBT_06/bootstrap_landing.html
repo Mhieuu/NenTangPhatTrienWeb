@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">NovaStore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+        </ul>
+        <form class="d-flex me-lg-3 mb-3 mb-lg-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <button class="btn btn-warning position-relative">
+          Cart
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://placehold.co/1600x600/0d6efd/ffffff" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+          <h2>New season arrivals</h2>
+          <p>Bootstrap layout with responsive components.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://placehold.co/1600x600/198754/ffffff" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+          <h2>Deals for every device</h2>
+          <p>Fast build with utilities and grid system.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://placehold.co/1600x600/d63384/ffffff" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+          <h2>Sale up to 50%</h2>
+          <p>Clean landing page built with Bootstrap only.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></button>
+  </div>
+
+  <main id="products" class="container py-5">
+    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+      <div class="col">
+        <div class="card h-100 shadow-sm position-relative">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+          <img src="https://placehold.co/600x400" class="card-img-top" alt="Product 1">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Wireless Headphone</h5>
+            <p class="card-text text-muted">Premium sound and long battery life.</p>
+            <div class="mt-auto d-flex gap-2">
+              <button class="btn btn-primary">Buy now</button>
+              <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col"><div class="card h-100 shadow-sm"><img src="https://placehold.co/600x400" class="card-img-top" alt="Product 2"><div class="card-body"><h5 class="card-title">Smart Watch</h5><p class="card-text text-muted">Track health and notifications.</p><button class="btn btn-primary">Buy now</button></div></div></div>
+      <div class="col"><div class="card h-100 shadow-sm"><img src="https://placehold.co/600x400" class="card-img-top" alt="Product 3"><div class="card-body"><h5 class="card-title">Gaming Mouse</h5><p class="card-text text-muted">Responsive sensor and grip.</p><button class="btn btn-primary">Buy now</button></div></div></div>
+      <div class="col"><div class="card h-100 shadow-sm"><img src="https://placehold.co/600x400" class="card-img-top" alt="Product 4"><div class="card-body"><h5 class="card-title">Mechanical Keyboard</h5><p class="card-text text-muted">Fast switches and RGB glow.</p><button class="btn btn-primary">Buy now</button></div></div></div>
+      <div class="col"><div class="card h-100 shadow-sm"><img src="https://placehold.co/600x400" class="card-img-top" alt="Product 5"><div class="card-body"><h5 class="card-title">USB-C Hub</h5><p class="card-text text-muted">One hub for all devices.</p><button class="btn btn-primary">Buy now</button></div></div></div>
+      <div class="col"><div class="card h-100 shadow-sm"><img src="https://placehold.co/600x400" class="card-img-top" alt="Product 6"><div class="card-body"><h5 class="card-title">Desk Lamp</h5><p class="card-text text-muted">Warm light for late work.</p><button class="btn btn-primary">Buy now</button></div></div></div>
+      <div class="col"><div class="card h-100 shadow-sm"><img src="https://placehold.co/600x400" class="card-img-top" alt="Product 7"><div class="card-body"><h5 class="card-title">Monitor Stand</h5><p class="card-text text-muted">Raise your screen comfortably.</p><button class="btn btn-primary">Buy now</button></div></div></div>
+      <div class="col"><div class="card h-100 shadow-sm"><img src="https://placehold.co/600x400" class="card-img-top" alt="Product 8"><div class="card-body"><h5 class="card-title">Laptop Sleeve</h5><p class="card-text text-muted">Slim protection for travel.</p><button class="btn btn-primary">Buy now</button></div></div></div>
+    </div>
+  </main>
+
+  <footer id="footer" class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col"><h5>About</h5><p class="text-white-50">Bootstrap e-commerce landing demo.</p></div>
+        <div class="col"><h5>Support</h5><p class="text-white-50 mb-0">Help center</p><p class="text-white-50 mb-0">Shipping</p><p class="text-white-50">Returns</p></div>
+        <div class="col"><h5>Company</h5><p class="text-white-50 mb-0">Blog</p><p class="text-white-50 mb-0">Careers</p><p class="text-white-50">Press</p></div>
+        <div class="col"><h5>Newsletter</h5><p class="text-white-50">Subscribe for deals and updates.</p></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Quick View</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://placehold.co/600x400" class="img-fluid rounded mb-3" alt="Product detail">
+          <p>Product detail content shown inside a Bootstrap modal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
